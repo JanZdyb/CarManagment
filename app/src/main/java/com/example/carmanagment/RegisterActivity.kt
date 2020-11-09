@@ -1,6 +1,6 @@
 package com.example.carmanagment
 
-import android.R
+import android.content.Intent
 import android.graphics.Paint
 import android.os.Bundle
 import android.view.View
@@ -35,7 +35,8 @@ class RegisterActivity : AppCompatActivity() {
 
 
         registerButton.setOnClickListener(View.OnClickListener {
-
+            val intent = Intent(this, MainDesk::class.java)
+            startActivity(intent)
             if (isEmailValid() && isPasswordValid()) {
                 //tworzenie konta firebase
             }

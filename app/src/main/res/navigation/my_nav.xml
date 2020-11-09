@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/addCarFragment">
+
+    <fragment
+        android:id="@+id/addCarFragment"
+        android:name="com.example.carmanagment.AddCarFragment"
+        android:label="fragment_add_car"
+        tools:layout="@layout/fragment_add_car" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.carmanagment.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.carmanagment.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/carsFragment"
+        android:name="com.example.carmanagment.CarsFragment"
+        android:label="fragment_cars"
+        tools:layout="@layout/fragment_cars" />
+</navigation>
