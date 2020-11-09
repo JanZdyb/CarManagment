@@ -22,12 +22,12 @@ class LoginActivity : AppCompatActivity() {
         })
 
         forgetPasswordTextView.setOnClickListener(View.OnClickListener {
-            isValid(editTextTextEmailAddress.text.toString());
+            isEmailValid(editTextTextEmailAddress.text.toString());
         })
     }
 
-    private fun isValid(text: String): Boolean{
-        val valid = false
+    private fun isEmailValid(text: String): Boolean{
+        var valid = false
 
         if(TextUtils.isEmpty(text)){
             editTextTextEmailAddress.setError("Wpisz email")
@@ -40,6 +40,7 @@ class LoginActivity : AppCompatActivity() {
             }
             else{
                 editTextTextEmailAddress.setError(null)
+                valid = true
                 //firebase wyslanie emaila
             }
         }
