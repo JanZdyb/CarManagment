@@ -1,57 +1,52 @@
 package com.example.carmanagment
 
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import kotlinx.android.synthetic.main.fragment_add_car.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [AddCarFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class AddCarFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+class AddCarFragment : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_car, container, false)
+
+        val view = inflater.inflate(R.layout.fragment_add_car, container, false)
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AddCarFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-                AddCarFragment().apply {
-                    arguments = Bundle().apply {
-                        putString(ARG_PARAM1, param1)
-                        putString(ARG_PARAM2, param2)
-                    }
+    private fun isValid(): Boolean {
+        var valid = false
+        var carname = spinnerCarName.selectedItem.toString()
+        var carmodel = spinnerCarModel.selectedItem.toString()
+        var carengine = editTextEngine.text.toString()
+        var carproduction = editTextYearOfProduction.text.toString()
+        var horsepower = editTextHorsePower.text.toString()
+        var carmileage = editTextMileage.text.toString()
+        var VIN = editTextVIN.text.toString()
+
+
+        if(TextUtils.isEmpty(carname) || TextUtils.isEmpty(carmodel) ||
+                TextUtils.isEmpty(carengine) || TextUtils.isEmpty(carproduction) ||
+                TextUtils.isEmpty(horsepower) || TextUtils.isEmpty(carmileage)){
+            Toast.makeText(activity?.applicationContext, "Coś poszło nie tak", Toast.LENGTH_LONG).show()
+            valid = false
+        }
+        else{
+            if(!TextUtils.isEmpty(VIN)){
+                if(VIN.length == 17){
+                    editTextVIN.setError(null)
+                    valid = true
                 }
+                else{
+                    editTextVIN.setError("Numer VIN powinien zawierać 17 znaków")
+                }
+            }
+        }
+        return valid
     }
 }

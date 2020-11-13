@@ -81,6 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
         android:text="Zmień nazwę"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
@@ -91,6 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Promień powiadomień"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
@@ -101,6 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Zdjęcie profilowe"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
@@ -111,6 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Zmień hasło"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4" />
@@ -121,6 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Zmień e-mail"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5" />

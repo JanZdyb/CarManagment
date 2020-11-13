@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinnerCarName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -30,32 +30,35 @@
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/spinnerCarModel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCarName" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextEngine"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_shape"
         android:ems="10"
         android:gravity="center"
+        android:alpha="0.3"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:hint="Silnik"
         android:inputType="textPersonName"
         android:padding="12dp"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCarModel" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextYearOfProduction"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -63,62 +66,72 @@
         android:gravity="center"
         android:padding="12dp"
         android:textSize="12sp"
-        android:hint="Rok produkcji"
+        android:alpha="0.3"
+        android:textColorHint="@color/white"
         android:textColor="@color/white"
+        android:hint="Rok produkcji"
         android:background="@drawable/rounded_shape"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEngine" />
 
     <EditText
-        android:id="@+id/textView17"
+        android:id="@+id/editTextHorsePower"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="Moc"
         android:gravity="center"
         android:padding="12dp"
+        android:alpha="0.3"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:textSize="12sp"
         android:background="@drawable/rounded_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextYearOfProduction" />
 
     <Spinner
-        android:id="@+id/spinner4"
+        android:id="@+id/spinnerFuel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextHorsePower" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/editTextMileage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
+        android:alpha="0.3"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:inputType="textPersonName"
         android:hint="Przebieg"
         android:background="@drawable/rounded_shape"
-        android:textColor="@color/white"
         android:padding="12dp"
         android:textSize="12sp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner4" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerFuel" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/editTextVIN"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:padding="12dp"
+        android:alpha="0.3"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:textSize="12sp"
         android:hint="VIN (opcjonalnie)"
         android:inputType="textPersonName"
@@ -126,15 +139,16 @@
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextMileage" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/addNewCarButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Dodaj"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextVIN" />
 </androidx.constraintlayout.widget.ConstraintLayout>
