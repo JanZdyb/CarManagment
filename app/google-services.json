@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "897836117262",
+    "firebase_url": "https://carmanagment-9520d.firebaseio.com",
+    "project_id": "carmanagment-9520d",
+    "storage_bucket": "carmanagment-9520d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897836117262:android:4ecaf86ae2c6a9dbc97b5f",
+        "android_client_info": {
+          "package_name": "com.example.carmanagment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897836117262-meujtvsp8gl8rod82vrkb02duprrqba3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVgKROAQNaRqRW3PMw6KveE3Flq5bXbF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897836117262-meujtvsp8gl8rod82vrkb02duprrqba3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

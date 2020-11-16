@@ -15,6 +15,12 @@ import kotlinx.android.synthetic.main.fragment_add_car.view.*
 
 class AddCarFragment : Fragment(){
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+        }
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
