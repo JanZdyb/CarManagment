@@ -20,42 +20,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinnerCarName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <Spinner
-        android:id="@+id/spinnerCarModel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerCarName" />
-
     <EditText
         android:id="@+id/editTextEngine"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:alpha="0.3"
         android:background="@drawable/rounded_shape"
         android:ems="10"
         android:gravity="center"
-        android:alpha="0.3"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
         android:hint="Silnik"
         android:inputType="textPersonName"
         android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerCarModel" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextModelName" />
 
     <EditText
         android:id="@+id/editTextYearOfProduction"
@@ -81,46 +63,37 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Moc"
-        android:gravity="center"
-        android:padding="12dp"
         android:alpha="0.3"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:textSize="12sp"
         android:background="@drawable/rounded_shape"
+        android:gravity="center"
+        android:hint="Moc"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextYearOfProduction" />
-
-    <Spinner
-        android:id="@+id/spinnerFuel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextHorsePower" />
 
     <EditText
         android:id="@+id/editTextMileage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:ems="10"
         android:alpha="0.3"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:inputType="textPersonName"
-        android:hint="Przebieg"
         android:background="@drawable/rounded_shape"
-        android:padding="12dp"
-        android:textSize="12sp"
+        android:ems="10"
         android:gravity="center"
+        android:hint="Przebieg"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerFuel" />
+        app:layout_constraintTop_toBottomOf="@+id/fuelGroup" />
 
     <EditText
         android:id="@+id/editTextVIN"
@@ -151,4 +124,81 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextVIN" />
+
+    <EditText
+        android:id="@+id/editTextCarName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:alpha="0.3"
+        android:background="@drawable/rounded_shape"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Marka pojazdu"
+        android:inputType="textPersonName"
+        android:padding="12sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <EditText
+        android:id="@+id/editTextModelName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:alpha="0.3"
+        android:background="@drawable/rounded_shape"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Model pojazdu"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCarName" />
+
+    <RadioGroup
+        android:id="@+id/fuelGroup"
+        android:layout_width="264dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHorsePower">
+
+        <RadioButton
+            android:id="@+id/radioButton9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Benzyna "
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radioButton10"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Diesel "
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radioButton11"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Elektryk"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
